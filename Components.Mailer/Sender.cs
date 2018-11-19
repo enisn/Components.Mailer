@@ -11,13 +11,15 @@ namespace Components.Mailer
 {
     public class Sender
     {
+        #region Configuration
         internal const string smtpAddress = "smtp.yandex.com";
         internal const int portNumber = 465;
         internal const bool enableSSL = true;
 
-        internal const string emailFrom = "noreply@conetwork.info";
+        internal const string emailFrom = "noreply@yourdomain.com";
         internal const string password = "PASSWORD HERE";
-
+        #endregion
+            
         public static bool Send(string targetMail, string title, string content)
         {
             try
